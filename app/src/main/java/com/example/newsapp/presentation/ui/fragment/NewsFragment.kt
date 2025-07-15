@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.newsapp.databinding.FragmentNewsBinding
 import com.example.newsapp.presentation.ui.adapter.NewsAdapter
 import com.example.newsapp.presentation.viewmodel.NewsViewModel
@@ -27,6 +28,7 @@ class NewsFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        binding.recyclerView.layoutManager= LinearLayoutManager(requireContext())
         binding.recyclerView.adapter = newsAdapter
 
         binding.swipeRefreshLayout.setOnRefreshListener {

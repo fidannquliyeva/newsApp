@@ -20,7 +20,7 @@ object AppModule {
 
     @Provides
     fun provideApiKeyInterceptor(): Interceptor {
-        return ApiKeyInterceptor("YOUR_API_KEY")
+        return ApiKeyInterceptor("e2b0c45825b24cef86677d0527f47409")
     }
 
     @Provides
